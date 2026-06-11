@@ -46,9 +46,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full h-16 bg-background/95 backdrop-blur-md border-b border-outline-variant">
       <div className="max-w-6xl mx-auto px-6 h-full flex justify-between items-center">
-        <a href="#profile" onClick={(e) => handleClick(e, 'profile')} className="flex items-center gap-3 font-display text-2xl font-bold text-primary">
-          <span className="material-symbols-outlined fill-1">terminal</span>
-          <span>JyO Solutions</span>
+        <a href="#profile" onClick={(e) => handleClick(e, 'profile')} className="flex items-center gap-3">
+          <img src="/img/logo-negativo.png" alt="JyO Solutions Logo" className="h-8 w-auto object-contain" />
         </a>
 
         {/* Desktop menu */}
