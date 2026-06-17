@@ -1,139 +1,180 @@
 import React from 'react';
 
 export default function ExperienceAndEducation() {
-  const skillsList = [
-    { title: '.NET 8', desc: 'Desarrollo web y backend escalable con C# y ASP.NET Core.' },
-    { title: 'Bases de Datos', desc: 'Diseño, optimización y consultas eficientes con SQL Server.' },
-    { title: 'Infraestructura', desc: 'Administración de servidores críticos, Active Directory y redes Cisco.' },
-    { title: 'Automatización', desc: 'Escribir scripts y automatizar tareas operativas recurrentes.' }
-  ];
-
   return (
-    <section className="container mx-auto px-6 py-16" id="experience">
+    <section className="container mx-auto px-6 py-16 relative" id="experience">
+      {/* Background glow for the section */}
+      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-cyan-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-violet-500/5 blur-[100px] rounded-full pointer-events-none -z-10" />
+
       <div className="mb-12">
-        <span className="font-mono text-sm text-primary tracking-widest block mb-2">// SYSTEM_LOGS / CAREER_PATH</span>
-        <h2 className="font-display text-3xl font-bold">Infraestructura y Formación</h2>
+        <span className="font-mono text-sm text-cyan-400 tracking-widest block mb-2">// TRAYECTORIA / DESARROLLO</span>
+        <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white">Infraestructura y Formación</h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* Experience Box (Casino) */}
-        <div className="technical-card p-6 md:col-span-7 flex flex-col justify-between">
+        <div className="glass-card p-8 lg:col-span-7 flex flex-col justify-between relative overflow-hidden group">
+          {/* Subtle hover gradient trace */}
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-600/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          
           <div>
-            <div className="flex justify-between items-start mb-6">
+            <div className="flex justify-between items-start mb-8">
               <div>
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-primary mb-1">
+                <h3 className="font-display text-2xl font-bold text-white mb-2 group-hover:text-violet-400 transition-colors">
                   Casino - Infraestructura & Desarrollo
                 </h3>
-                <div className="font-mono text-xs text-on-surface-variant flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-xs">calendar_today</span>
+                <div className="font-mono text-xs text-slate-400 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-sm text-violet-400">calendar_today</span>
                   Trayectoria Profesional
                 </div>
               </div>
-              <span className="chip bg-surface-container-highest">LIVE_OPS</span>
+              <span className="font-mono text-[10px] tracking-wider bg-violet-500/10 text-violet-400 border border-violet-500/20 px-3 py-1 rounded-full uppercase">
+                LIVE_OPS
+              </span>
             </div>
 
-            <ul className="space-y-4 mb-6">
-              <li className="flex gap-4">
-                <span className="text-primary font-mono font-bold">01</span>
-                <span className="text-body-md text-on-surface-variant">
-                  Administración integral de infraestructura crítica, incluyendo gestión de redes y despliegue de servidores.
-                </span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-primary font-mono font-bold">02</span>
-                <span className="text-body-md text-on-surface-variant">
-                  Desarrollo de software interno utilizando el stack .NET, implementando conceptos avanzados de arquitectura y optimización de bases de datos.
-                </span>
-              </li>
-              <li className="flex gap-4">
-                <span className="text-primary font-mono font-bold">03</span>
-                <span className="text-body-md text-on-surface-variant">
-                  Optimización sistemática de procesos operativos a través de automatización y refinamiento técnico.
-                </span>
-              </li>
-            </ul>
+            <div className="space-y-6 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[1px] before:bg-slate-800">
+              
+              <div className="flex gap-4 relative">
+                <div className="w-6 h-6 rounded-full bg-slate-900 border border-violet-500/40 flex items-center justify-center text-[10px] font-mono text-violet-400 font-bold z-10 shadow-[0_0_10px_rgba(139,92,246,0.2)]">
+                  01
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Administración integral de infraestructura crítica, incluyendo gestión de redes y despliegue de servidores.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 relative">
+                <div className="w-6 h-6 rounded-full bg-slate-900 border border-violet-500/40 flex items-center justify-center text-[10px] font-mono text-violet-400 font-bold z-10 shadow-[0_0_10px_rgba(139,92,246,0.2)]">
+                  02
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Desarrollo de software interno utilizando el stack .NET, implementando conceptos avanzados de arquitectura y optimización de bases de datos.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 relative">
+                <div className="w-6 h-6 rounded-full bg-slate-900 border border-violet-500/40 flex items-center justify-center text-[10px] font-mono text-violet-400 font-bold z-10 shadow-[0_0_10px_rgba(139,92,246,0.2)]">
+                  03
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Optimización sistemática de procesos operativos a través de automatización y refinamiento técnico.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 relative">
+                <div className="w-6 h-6 rounded-full bg-slate-900 border border-violet-500/40 flex items-center justify-center text-[10px] font-mono text-violet-400 font-bold z-10 shadow-[0_0_10px_rgba(139,92,246,0.2)]">
+                  04
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-slate-300 leading-relaxed">
+                    Instalación y mantenimiento de sistemas de videovigilancia CCTV, configurando cámaras analógicas e IP, DVRs y NVRs.
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-2 pt-4 border-t border-outline-variant/30">
+          <div className="flex flex-wrap gap-2 pt-6 mt-8 border-t border-slate-800/80">
             <span className="chip">.NET 8</span>
             <span className="chip">C#</span>
             <span className="chip">Active Directory</span>
             <span className="chip">SQL Server</span>
             <span className="chip">Cisco Networking</span>
+            <span className="chip">CCTV (IP/Analógico)</span>
+            <span className="chip">DVR & NVR</span>
           </div>
         </div>
 
         {/* Education Box */}
-        <div className="technical-card p-6 md:col-span-5 border-l-4 border-l-primary flex flex-col justify-between">
+        <div className="glass-card p-8 lg:col-span-5 flex flex-col justify-between relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-bl from-cyan-600/5 to-violet-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          
           <div>
-            <h3 className="font-display text-xl font-bold mb-1">Técnico Superior Analista de Sistemas</h3>
-            <p className="font-mono text-xs text-primary mb-6">Instituto Argentino de Estudios Superiores (I.A.E.S.)</p>
+            <div className="mb-6">
+              <h3 className="font-display text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">Técnico Superior Analista de Sistemas</h3>
+              <p className="font-mono text-xs text-cyan-400 mb-3">Instituto Argentino de Estudios Superiores (I.A.E.S.)</p>
+              <span className="font-mono text-[9px] tracking-widest bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2.5 py-0.5 rounded-full uppercase">
+                COMPLETO
+              </span>
+            </div>
             
-            <div className="flex justify-between items-center pb-4 border-b border-outline-variant/30 mb-6">
-              <span className="text-body-md text-on-surface-variant">Promedio General (GPA)</span>
-              <span className="font-display text-3xl font-extrabold text-primary">7.75</span>
+            <div className="pt-6 border-t border-slate-800/80 mb-6">
+              <h3 className="font-display text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">Ciencia de Datos e IA</h3>
+              <p className="font-mono text-xs text-cyan-400 mb-3">Formación Académica en Progreso</p>
+              <span className="font-mono text-[9px] tracking-widest bg-cyan-400/20 text-cyan-200 border border-cyan-400/30 px-2.5 py-0.5 rounded-full uppercase">
+                1º AÑO EN CURSO
+              </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              <div className="bg-surface-container-low border border-outline-variant p-3 rounded-sm text-center">
-                <div className="font-mono text-[10px] text-primary mb-1">DESARROLLO</div>
-                <div className="font-display text-xl font-bold">10</div>
+            <div className="grid grid-cols-2 gap-3 mt-4">
+              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
+                <div className="font-mono text-[10px] text-violet-400 mb-1">DESARROLLO</div>
+                <div className="font-display text-2xl font-bold text-white">10</div>
               </div>
-              <div className="bg-surface-container-low border border-outline-variant p-3 rounded-sm text-center">
-                <div className="font-mono text-[10px] text-primary mb-1">PROGRAMACIÓN</div>
-                <div className="font-display text-xl font-bold">10</div>
+              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
+                <div className="font-mono text-[10px] text-violet-400 mb-1">PROGRAMACIÓN</div>
+                <div className="font-display text-2xl font-bold text-white">10</div>
               </div>
-              <div className="bg-surface-container-low border border-outline-variant p-3 rounded-sm text-center">
-                <div className="font-mono text-[10px] text-primary mb-1">ANÁLISIS</div>
-                <div className="font-display text-xl font-bold">10</div>
+              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
+                <div className="font-mono text-[10px] text-violet-400 mb-1">ANÁLISIS</div>
+                <div className="font-display text-2xl font-bold text-white">10</div>
               </div>
-              <div className="bg-surface-container-low border border-outline-variant p-3 rounded-sm text-center">
-                <div className="font-mono text-[10px] text-primary mb-1">PRÁCTICA PROF.</div>
-                <div className="font-display text-xl font-bold">10</div>
+              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
+                <div className="font-mono text-[10px] text-violet-400 mb-1">PRÁCTICA PROF.</div>
+                <div className="font-display text-2xl font-bold text-white">10</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Core Capabilities Mini Bento Cards */}
-        <div className="technical-card p-4 md:col-span-3 flex items-center gap-4">
-          <div className="bg-primary/10 p-3 rounded-sm text-primary flex items-center justify-center">
+        <div className="glass-card p-5 lg:col-span-3 flex items-center gap-4 hover:border-violet-500/30 transition-all">
+          <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(139,92,246,0.15)]">
             <span className="material-symbols-outlined text-2xl">data_object</span>
           </div>
           <div>
-            <div className="font-mono text-[10px] text-primary">STACK</div>
-            <div className="text-body-md font-semibold text-on-surface">.NET (C# / ASP.NET)</div>
+            <div className="font-mono text-[10px] text-violet-400">STACK</div>
+            <div className="text-sm font-bold text-white font-display mt-0.5">.NET (C# / ASP.NET)</div>
           </div>
         </div>
 
-        <div className="technical-card p-4 md:col-span-3 flex items-center gap-4">
-          <div className="bg-primary/10 p-3 rounded-sm text-primary flex items-center justify-center">
+        <div className="glass-card p-5 lg:col-span-3 flex items-center gap-4 hover:border-cyan-500/30 transition-all">
+          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(6,180,212,0.15)]">
             <span className="material-symbols-outlined text-2xl">hub</span>
           </div>
           <div>
-            <div className="font-mono text-[10px] text-primary">REDES</div>
-            <div className="text-body-md font-semibold text-on-surface">Cisco & Redes Críticas</div>
+            <div className="font-mono text-[10px] text-cyan-400">REDES</div>
+            <div className="text-sm font-bold text-white font-display mt-0.5">Cisco & Redes Críticas</div>
           </div>
         </div>
 
-        <div className="technical-card p-4 md:col-span-3 flex items-center gap-4">
-          <div className="bg-primary/10 p-3 rounded-sm text-primary flex items-center justify-center">
+        <div className="glass-card p-5 lg:col-span-3 flex items-center gap-4 hover:border-violet-500/30 transition-all">
+          <div className="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/20 text-violet-400 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(139,92,246,0.15)]">
             <span className="material-symbols-outlined text-2xl">database</span>
           </div>
           <div>
-            <div className="font-mono text-[10px] text-primary">DATOS</div>
-            <div className="text-body-md font-semibold text-on-surface">BBDD Relacionales</div>
+            <div className="font-mono text-[10px] text-violet-400">DATOS</div>
+            <div className="text-sm font-bold text-white font-display mt-0.5">BBDD Relacionales</div>
           </div>
         </div>
 
-        <div className="technical-card p-4 md:col-span-3 flex items-center gap-4">
-          <div className="bg-primary/10 p-3 rounded-sm text-primary flex items-center justify-center">
+        <div className="glass-card p-5 lg:col-span-3 flex items-center gap-4 hover:border-cyan-500/30 transition-all">
+          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(6,180,212,0.15)]">
             <span className="material-symbols-outlined text-2xl">verified_user</span>
           </div>
           <div>
-            <div className="font-mono text-[10px] text-primary">INGLÉS</div>
-            <div className="text-body-md font-semibold text-on-surface">Lectura Avanzada (ADV)</div>
+            <div className="font-mono text-[10px] text-cyan-400">INGLÉS</div>
+            <div className="text-sm font-bold text-white font-display mt-0.5">Lectura Avanzada (ADV)</div>
           </div>
         </div>
 

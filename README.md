@@ -1,16 +1,32 @@
-# React + Vite
+# Portfolio Profesional - JyO Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio interactivo y moderno de Julián Antúnez - Analista de Sistemas y Desarrollador .NET.
 
-Currently, two official plugins are available:
+## 🚀 Nueva Estética Abstracta (Glassmorphism)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El portafolio ha sido rediseñado recientemente con una interfaz visual inmersiva y de alta gama:
+- **Mesh Gradients & Orbes Animados**: Fondos fluidos decorativos con orbes de color difuminados que flotan lentamente.
+- **Glassmorphism**: Componentes y tarjetas Bento translúcidas (`backdrop-filter`) con bordes semitransparentes que reflejan la luz y se adaptan al fondo dinámico.
+- **Bento Grid Layout**: Organización asimétrica y moderna para la sección de trayectoria técnica, educación y habilidades principales.
+- **Consola Interactiva**: Simulador de terminal de comandos funcional (`help`, `about`, `skills`, `projects`, `contact`, `clear`) para una experiencia de usuario interactiva y geek.
+- **Tipografía Moderna**: Integración de *Plus Jakarta Sans* para títulos estilizados e *Inter* para lectura fluida.
 
-## React Compiler
+## 🛠️ Stack Tecnológico
+- **Frontend**: React (JSX) + Vite + Tailwind CSS (v4)
+- **Infraestructura & Backend (Sistemas Destacados)**: .NET 8 (C#), ASP.NET Core, SQL Server, Dapper, Active Directory, Redes Cisco, CCTV (DVR/NVR).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Instalación y Desarrollo
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio.
+2. Instalar las dependencias de Node:
+   ```bash
+   npm install
+   ```
+3. Lanzar el servidor de desarrollo local:
+   ```bash
+   npm run dev
+   ```
+4. Compilar la aplicación para producción:
+   ```bash
+   npm run build
+   ```

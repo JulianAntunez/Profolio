@@ -5,17 +5,15 @@ import ExperienceAndEducation from './components/ExperienceAndEducation';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AbstractBackground from './components/AbstractBackground';
 
 function App() {
   return (
     <div className="relative min-h-screen">
+      <AbstractBackground />
       <Navbar />
       
-      {/* Decorative Plaque Circuits */}
-      <div className="circuit-line top-40 left-0"></div>
-      <div className="circuit-line top-[900px] right-0"></div>
-      
-      <main className="max-w-6xl mx-auto py-6">
+      <main className="max-w-6xl mx-auto py-6 relative z-10">
         <Hero />
         <ExperienceAndEducation />
         <Projects />
