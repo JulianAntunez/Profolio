@@ -116,24 +116,6 @@ export default function ExperienceAndEducation() {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 mt-4">
-              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
-                <div className="font-mono text-[10px] text-violet-400 mb-1">DESARROLLO</div>
-                <div className="font-display text-2xl font-bold text-white">10</div>
-              </div>
-              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
-                <div className="font-mono text-[10px] text-violet-400 mb-1">PROGRAMACIÓN</div>
-                <div className="font-display text-2xl font-bold text-white">10</div>
-              </div>
-              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
-                <div className="font-mono text-[10px] text-violet-400 mb-1">ANÁLISIS</div>
-                <div className="font-display text-2xl font-bold text-white">10</div>
-              </div>
-              <div className="bg-slate-900/30 border border-white/5 p-3.5 rounded-xl text-center hover:border-violet-500/20 transition-all">
-                <div className="font-mono text-[10px] text-violet-400 mb-1">PRÁCTICA PROF.</div>
-                <div className="font-display text-2xl font-bold text-white">10</div>
-              </div>
-            </div>
           </div>
         </div>
 
