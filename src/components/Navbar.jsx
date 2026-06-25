@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ theme, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('profile');
 
@@ -45,47 +45,74 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-4 z-50 max-w-6xl mx-auto px-4 md:px-6">
-      <div className="w-full h-16 bg-slate-950/50 backdrop-blur-xl border border-white/5 rounded-2xl px-6 flex justify-between items-center shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]">
+      <div className="w-full h-16 bg-surface/50 backdrop-blur-xl border border-outline-variant rounded-2xl px-6 flex justify-between items-center shadow-[0_8px_32px_0_rgba(0,0,0,0.2)] transition-all">
         <a href="#profile" onClick={(e) => handleClick(e, 'profile')} className="flex items-center gap-3">
-          <img src="/img/J&O Solutions - Isotipo 2.png" alt="JyO Solutions Logo" className="h-8 w-auto object-contain brightness-110" />
+          <img src="/img/J&O Solutions - Isotipo 2.png" alt="JyO Solutions Logo" className="h-8 w-auto object-contain brightness-110 dark:brightness-110 light:brightness-100" />
         </a>
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <li key={item.id} className="relative">
-              <a
-                href={`#${item.id}`}
-                onClick={(e) => handleClick(e, item.id)}
-                className={`font-display text-sm font-medium transition-all duration-300 pb-1 relative block ${
-                  activeSection === item.id 
-                    ? 'text-white' 
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                {item.label}
-                {/* Glowing under-line indicator */}
-                {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-full shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
-                )}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navItems.map((item) => (
+              <li key={item.id} className="relative">
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => handleClick(e, item.id)}
+                  className={`font-display text-sm font-medium transition-all duration-300 pb-1 relative block ${
+                    activeSection === item.id 
+                      ? 'text-on-surface' 
+                      : 'text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  {item.label}
+                  {/* Glowing under-line indicator */}
+                  {activeSection === item.id && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-full shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
+                  )}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-violet-400 hover:text-cyan-400 transition-colors flex items-center justify-center p-2 rounded-lg bg-white/5 border border-white/10"
-          aria-label="Toggle Menu"
-        >
-          <span className="material-symbols-outlined">{isOpen ? 'close' : 'menu'}</span>
-        </button>
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center justify-center p-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
+            aria-label="Toggle Theme"
+          >
+            <span className="material-symbols-outlined text-[18px]">
+              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile controls */}
+        <div className="flex md:hidden items-center gap-3">
+          {/* Theme Toggle Button Mobile */}
+          <button
+            onClick={toggleTheme}
+            className="flex items-center justify-center p-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
+            aria-label="Toggle Theme"
+          >
+            <span className="material-symbols-outlined text-[18px]">
+              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+            </span>
+          </button>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-violet-400 hover:text-cyan-400 transition-colors flex items-center justify-center p-2.5 rounded-lg bg-on-surface/[0.04] border border-outline-variant cursor-pointer"
+            aria-label="Toggle Menu"
+          >
+            <span className="material-symbols-outlined text-[18px]">{isOpen ? 'close' : 'menu'}</span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown */}
       {isOpen && (
-        <ul className="md:hidden absolute top-20 left-4 right-4 bg-slate-950/80 backdrop-blur-2xl border border-white/5 p-6 flex flex-col gap-4 rounded-2xl shadow-[0_16px_32px_rgba(0,0,0,0.6)] z-40">
+        <ul className="md:hidden absolute top-20 left-4 right-4 bg-surface/90 backdrop-blur-2xl border border-outline-variant p-6 flex flex-col gap-4 rounded-2xl shadow-[0_16px_32px_rgba(0,0,0,0.3)] z-40 transition-all">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -93,8 +120,8 @@ export default function Navbar() {
                 onClick={(e) => handleClick(e, item.id)}
                 className={`block font-display text-sm font-medium py-2 px-3 rounded-lg transition-all ${
                   activeSection === item.id 
-                    ? 'text-white bg-white/5 border-l-2 border-violet-500' 
-                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                    ? 'text-on-surface bg-on-surface/[0.05] border-l-2 border-violet-500' 
+                    : 'text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.05]'
                 }`}
               >
                 {item.label}

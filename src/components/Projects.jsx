@@ -1,5 +1,73 @@
 import React from 'react';
 
+const renderTechIcon = (tech) => {
+  const t = tech.toLowerCase();
+  if (t.includes('net 8') || t.includes('net core') || t.includes('.net')) {
+    return <i className="devicon-dotnetcore-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('c#')) {
+    return <i className="devicon-csharp-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('sql server') || t.includes('server') || t.includes('database')) {
+    return <i className="devicon-microsoftsqlserver-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('react') || t.includes('jsx')) {
+    return <i className="devicon-react-original colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('javascript') || t.includes('js')) {
+    return <i className="devicon-javascript-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('html')) {
+    return <i className="devicon-html5-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('css')) {
+    return <i className="devicon-css3-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('php')) {
+    return <i className="devicon-php-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('cisco') || t.includes('networking')) {
+    return <i className="devicon-cisco-plain colored text-xs shrink-0"></i>;
+  }
+  if (t.includes('visual basic') || t.includes('vb')) {
+    return <i className="devicon-windows8-original colored text-xs shrink-0"></i>;
+  }
+  
+  // Custom styled Material Symbols
+  if (t.includes('dapper')) {
+    return <span className="material-symbols-outlined text-[10px] text-amber-500 font-bold shrink-0">database</span>;
+  }
+  if (t.includes('entity framework') || t.includes('ef')) {
+    return <span className="material-symbols-outlined text-[10px] text-sky-400 font-bold shrink-0">hub</span>;
+  }
+  if (t.includes('signalr')) {
+    return <span className="material-symbols-outlined text-[10px] text-orange-500 font-bold shrink-0">sensors</span>;
+  }
+  if (t.includes('api')) {
+    return <span className="material-symbols-outlined text-[10px] text-emerald-400 font-bold shrink-0">api</span>;
+  }
+  if (t.includes('windows forms')) {
+    return <span className="material-symbols-outlined text-[10px] text-cyan-400 font-bold shrink-0">desktop_windows</span>;
+  }
+  if (t.includes('openxml')) {
+    return <span className="material-symbols-outlined text-[10px] text-emerald-500 font-bold shrink-0">description</span>;
+  }
+  if (t.includes('pdf') || t.includes('questpdf')) {
+    return <span className="material-symbols-outlined text-[10px] text-rose-500 font-bold shrink-0">picture_as_pdf</span>;
+  }
+  if (t.includes('active directory') || t.includes('ad')) {
+    return <span className="material-symbols-outlined text-[10px] text-blue-400 font-bold shrink-0">admin_panel_settings</span>;
+  }
+  if (t.includes('cctv')) {
+    return <span className="material-symbols-outlined text-[10px] text-red-400 font-bold shrink-0">videocam</span>;
+  }
+  if (t.includes('dvr') || t.includes('nvr') || t.includes('memory')) {
+    return <span className="material-symbols-outlined text-[10px] text-amber-400 font-bold shrink-0">memory</span>;
+  }
+
+  return <span className="material-symbols-outlined text-[10px] text-cyan-400 font-bold shrink-0">tag</span>;
+};
+
 export default function Projects() {
   const projectsData = [
     {
@@ -57,7 +125,7 @@ export default function Projects() {
       <div className="mb-12 flex justify-between items-end">
         <div>
           <span className="font-mono text-sm text-cyan-400 tracking-widest block mb-2">// PORTFOLIO / SISTEMAS</span>
-          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white">Proyectos Críticos</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-extrabold text-on-surface">Proyectos Críticos</h2>
         </div>
       </div>
 
@@ -93,17 +161,20 @@ export default function Projects() {
             <div className="p-6 flex flex-col flex-grow relative">
               <span className="font-mono text-[10px] text-cyan-400 tracking-wider mb-2 block">{project.tag}</span>
 
-              <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors">
+              <h3 className="font-display text-xl font-bold text-on-surface mb-3 group-hover:text-violet-400 transition-colors">
                 {project.title}
               </h3>
               
-              <p className="text-sm text-slate-400 mb-6 flex-grow leading-relaxed">
+              <p className="text-sm text-on-surface-variant mb-6 flex-grow leading-relaxed">
                 {project.desc}
               </p>
               
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-outline/30">
                 {project.tech.map((t, index) => (
-                  <span key={index} className="chip">{t}</span>
+                  <span key={index} className="chip flex items-center gap-1.5 hover:scale-105 transition-all">
+                    {renderTechIcon(t)}
+                    {t}
+                  </span>
                 ))}
               </div>
             </div>
@@ -117,19 +188,19 @@ export default function Projects() {
           <div className="w-full flex flex-col sm:flex-row justify-around items-center gap-8 text-center relative z-10">
             <div className="group-hover:scale-105 transition-transform duration-300">
               <div className="font-display text-4xl lg:text-5xl font-extrabold gradient-text-primary">15+</div>
-              <div className="font-mono text-[9px] tracking-widest text-slate-400 mt-2 uppercase">Sistemas Desplegados</div>
+              <div className="font-mono text-[9px] tracking-widest text-on-surface-variant mt-2 uppercase">Sistemas Desplegados</div>
             </div>
-            <div className="hidden sm:block h-12 border-l border-slate-800" />
+            <div className="hidden sm:block h-12 border-l border-outline/30" />
             
             <div className="group-hover:scale-105 transition-transform duration-300">
               <div className="font-display text-4xl lg:text-5xl font-extrabold gradient-text-primary">4K+</div>
-              <div className="font-mono text-[9px] tracking-widest text-slate-400 mt-2 uppercase">Activos Gestionados</div>
+              <div className="font-mono text-[9px] tracking-widest text-on-surface-variant mt-2 uppercase">Activos Gestionados</div>
             </div>
-            <div className="hidden sm:block h-12 border-l border-slate-800" />
+            <div className="hidden sm:block h-12 border-l border-outline/30" />
             
             <div className="group-hover:scale-105 transition-transform duration-300">
               <div className="font-display text-4xl lg:text-5xl font-extrabold gradient-text-primary">99.9%</div>
-              <div className="font-mono text-[9px] tracking-widest text-slate-400 mt-2 uppercase">Uptime en Servicios</div>
+              <div className="font-mono text-[9px] tracking-widest text-on-surface-variant mt-2 uppercase">Uptime en Servicios</div>
             </div>
           </div>
         </div>

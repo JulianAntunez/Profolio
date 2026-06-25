@@ -28,14 +28,14 @@ export default function Hero() {
           </div>
           
           {/* Main heading */}
-          <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-none mb-6 text-white tracking-tight">
+          <h1 className="font-display text-4xl md:text-6xl font-extrabold leading-none mb-6 text-on-surface tracking-tight">
             Analista de Sistemas & <br />
             <span className="gradient-text-primary block mt-2">.NET Developer</span>
           </h1>
           
           {/* Intro paragraph */}
-          <p className="font-body text-base md:text-lg text-slate-300 max-w-2xl mb-8 leading-relaxed">
-            Especializado en el desarrollo de software empresarial con el ecosistema <strong className="text-violet-400 font-semibold">.NET</strong> y la gestión de infraestructura crítica en entornos de alta disponibilidad (Casino). Apasionado por optimizar procesos mediante automatizaciones y el diseño de herramientas de software robustas y personalizadas.
+          <p className="font-body text-base md:text-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+            Especializado en el desarrollo de software empresarial con el ecosistema <strong className="text-primary font-semibold">.NET</strong> y la gestión de infraestructura crítica en entornos de alta disponibilidad (Casino). Apasionado por optimizar procesos mediante automatizaciones y el diseño de herramientas de software robustas y personalizadas.
           </p>
           
           {/* Actions */}
@@ -49,7 +49,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => handleScrollTo('experience')}
-              className="border border-slate-800 bg-slate-950/20 backdrop-blur-md font-display text-sm px-8 py-3.5 rounded-xl text-slate-300 font-semibold hover:border-violet-500/30 hover:text-white transition-all cursor-pointer"
+              className="border border-outline bg-on-surface/[0.02] backdrop-blur-md font-display text-sm px-8 py-3.5 rounded-xl text-on-surface-variant font-semibold hover:border-primary/35 hover:text-on-surface hover:bg-on-surface/[0.06] transition-all cursor-pointer"
             >
               Trayectoria
             </button>
