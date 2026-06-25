@@ -11,7 +11,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex gap-6 font-mono text-sm">
-          <a href="https://linkedin.com/in/analyst-net" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-violet-400 transition-colors">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/juli%C3%A1n-ant%C3%BAnez-b3b57b223/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-violet-400 transition-colors">LinkedIn</a>
           <a href="https://github.com/JulianAntunez" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">GitHub</a>
           <a href="mailto:JyOSolutions@gmail.com.ar" className="text-slate-400 hover:text-violet-400 transition-colors">Email</a>
         </div>

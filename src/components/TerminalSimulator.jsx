@@ -70,7 +70,7 @@ export default function TerminalSimulator() {
           { text: 'Canales oficiales:', type: 'info' },
           { text: '  Email: JyOSolutions@gmail.com.ar', type: 'output' },
           { text: '  GitHub: github.com/JulianAntunez', type: 'output' },
-          { text: '  LinkedIn: linkedin.com/in/analyst-net', type: 'output' }
+          { text: '  LinkedIn: linkedin.com/in/julián-antúnez-b3b57b223', type: 'output' }
         );
         break;
       case 'clear':

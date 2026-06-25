@@ -73,7 +73,7 @@ export default function Contact() {
               </a>
 
               <a 
-                href="https://linkedin.com/in/analyst-net" 
+                href="https://www.linkedin.com/in/juli%C3%A1n-ant%C3%BAnez-b3b57b223/" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-center gap-4 group/item hover:translate-x-1 transition-transform"
@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="font-mono text-[9px] text-on-surface-variant/60">LINKEDIN RED</div>
-                  <span className="text-sm font-semibold text-on-surface-variant group-hover/item:text-on-surface transition-colors">linkedin.com/in/analyst-net</span>
+                  <span className="text-sm font-semibold text-on-surface-variant group-hover/item:text-on-surface transition-colors">linkedin.com/in/julián-antúnez-b3b57b223</span>
                 </div>
               </a>
             </div>
