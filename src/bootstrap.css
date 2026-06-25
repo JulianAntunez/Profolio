@@ -1,0 +1,52 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Adapting Bootstrap elements to our custom dark/light theme variables */
+[data-theme="dark"] .bg-body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="light"] .bg-body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Make cards and lists match our theme colors in Bootstrap mode */
+.bg-dark-custom {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+.text-secondary-custom {
+  color: var(--text-variant-color) !important;
+}
+
+.border-custom {
+  border-color: var(--outline-color) !important;
+}
+
+.border-variant-custom {
+  border-color: var(--outline-variant-color) !important;
+}
+
+/* Glass cards styled for Bootstrap elements */
+.bootstrap-glass-card {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--glass-shadow) !important;
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bootstrap-glass-card:hover {
+  background: var(--glass-bg-hover) !important;
+  border-color: var(--glass-border-hover) !important;
+  box-shadow: var(--glass-shadow-hover) !important;
+  transform: translateY(-2px);
+}

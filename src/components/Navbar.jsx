@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Navbar({ theme, toggleTheme }) {
+export default function Navbar({ theme, toggleTheme, framework, toggleFramework }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('profile');
 
@@ -74,24 +74,45 @@ export default function Navbar({ theme, toggleTheme }) {
             ))}
           </ul>
 
-          {/* Theme Toggle Button */}
-          <button
-            onClick={toggleTheme}
-            className="flex items-center justify-center p-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
-            aria-label="Toggle Theme"
-          >
-            <span className="material-symbols-outlined text-[18px]">
-              {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-            </span>
-          </button>
+          <div className="flex items-center gap-3">
+            {/* Framework Switch Button */}
+            <button
+              onClick={toggleFramework}
+              className="flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer font-mono text-xs"
+              aria-label="Toggle Framework"
+            >
+              <span className="material-symbols-outlined text-[15px]">palette</span>
+              <span>Bootstrap 5</span>
+            </button>
+
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-center p-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
+              aria-label="Toggle Theme"
+            >
+              <span className="material-symbols-outlined text-[18px]">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Mobile controls */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2">
+          {/* Framework Toggle Button Mobile */}
+          <button
+            onClick={toggleFramework}
+            className="flex items-center justify-center px-2 py-2 rounded-lg bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer font-mono text-[10px]"
+            aria-label="Toggle Framework"
+          >
+            🎨 BS5
+          </button>
+
           {/* Theme Toggle Button Mobile */}
           <button
             onClick={toggleTheme}
-            className="flex items-center justify-center p-2.5 rounded-xl bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
+            className="flex items-center justify-center p-2 rounded-lg bg-on-surface/[0.04] border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-on-surface/[0.08] transition-all cursor-pointer"
             aria-label="Toggle Theme"
           >
             <span className="material-symbols-outlined text-[18px]">
